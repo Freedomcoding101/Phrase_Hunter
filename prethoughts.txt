@@ -1,0 +1,20 @@
+Going to write a program where the user guesses at a phrase, letter by letter. If the letter is in the phrase it will be revealed to them on the screen.
+
+
+Create two Python Classes with specific attributes and methods
+
+Game Class 
+Manage the game
+
+Phrase Class
+help with storing attributes of phrase
+spcific methods to determine how to display the game
+
+Code will #######
+#Choose a random phrase and use _ as a placeholder until the letter is guessed.
+
+#Take input from the player, if their letter is correct it will replace the _ with it in any place in the "phrase" it is present
+
+#Player continues with five incorrect guesses only. After five incorrect guesses they lose. If they dont make it to 5 they win.
+
+#Winning screen appears if the player guesses the phrase. Losing screen appears if they lose
