@@ -15,26 +15,21 @@ class Phrase():
         pass
 
     def display(self):
-        print(''.join(self.phrazed))
+        print(''.join(self.phrazed)/n)
         #display guessed letters instead of placeholders
         #update as the user guesses
         
 
     def check_letter(self, guess):
-        if guess in self.letters:
+        if guess.lower() in self.letters:
             for i in range(len(self.letters)):
-                if self.letters[i] == guess:
-                    self.phrazed[i] = guess
+                if self.letters[i] == guess.lower():
+                    self.phrazed[i] = guess.lower()
 
 
     def check_complete(self):
         #check if the phrase has been guessed (All the blanks filled in)
         if self.letters == self.phrazed:
-            print("True")
+            return("True")
         else:
-            print("False")
-        
-
-phrase1 = Phrase("Hello WoRlD")
-guess1 = "A"
-guess2 = "O"
+            return("False")
