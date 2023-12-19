@@ -1,18 +1,20 @@
-from phrase import Phrase
+from phrasehunter.phrase import Phrase
 
 import random
+import sys
 
 
 class Game():
     def __init__(self):
         self.missed = 0
-        self.phrases = ['HELLO world', 'mINIture donkey', 'pOTato chips', 'chocolate mACRoons', 'tomATo sauce']
+        self.phrases = ['HELLO world', 'Monkey BusIness', 'pOTato chips', 'chocolate mACRoons', 'tomATo sauce']
         self.active_phrase = None
         self.guesses = []
 
     def start(self):
         self.get_random_phrase()
         self.welcome()
+        
         while self.missed < 6:
 
             game_status = self.active_phrase.check_complete()
@@ -42,7 +44,7 @@ class Game():
                 self.active_phrase.check_letter(guess)
                 if guess not in self.active_phrase:
                     self.missed +=1
-            
+
 
         #increments missed by 1 if missed
         #calls game over if 5 misses occur
@@ -51,8 +53,6 @@ class Game():
 
     def get_random_phrase(self):
         self.active_phrase = Phrase(random.choice(self.phrases))
-        print(self.active_phrase)
-        
 
     def welcome(self):
         print("--Welcome to the Phrase Hunter game!--")
