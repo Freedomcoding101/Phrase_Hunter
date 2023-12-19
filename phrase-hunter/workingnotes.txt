@@ -1,0 +1,2 @@
+basically everything is working. Need to work now on the exceeds expectations category. How to create a new instance of the game every time it loops, 
+or how to delete what is saved in the current phrase and guesses lists etc etc.. walking away now for a bit as I am going crazy.

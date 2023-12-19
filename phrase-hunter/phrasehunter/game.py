@@ -39,7 +39,6 @@ class Game():
                 print(f"Wrong Guesses = {self.missed}\n")
                 print("Your Guesses so far are...")
                 print(f"{self.guesses}\n")
-                print(game_status)
                 guess = self.get_guess()
                 self.active_phrase.check_letter(guess)
                 if guess not in self.active_phrase:
@@ -75,5 +74,4 @@ class Game():
             print("Games still on")
         
 
-game_instance = Game()
 new_game_instance = Game()
