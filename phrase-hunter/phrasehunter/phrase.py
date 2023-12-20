@@ -14,7 +14,7 @@ class Phrase():
 # joins the _ together and prints to terminal
     def display(self):
         print("\n-----------Your Phrase is!!--------------\n")
-        print(''.join(self.phrazed))
+        print(' '.join(self.phrazed))
 
 # check to see if guessed letter is in phrase
     def check_letter(self, guess):
