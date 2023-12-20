@@ -1,5 +1,4 @@
-import sys
-
+# initilize phrase, save it as lowercase and create two lists for comparison
 class Phrase():
     def __init__(self, phrase):
         self.phrase = phrase.lower()
@@ -12,25 +11,20 @@ class Phrase():
     def __iter__(self):
         return iter(self.phrase)
 
-    def __eq__(self, other):
-        pass
-
+# joins the _ together and prints to terminal
     def display(self):
         print("\n-----------Your Phrase is!!--------------\n")
         print(''.join(self.phrazed))
-        #display guessed letters instead of placeholders
-        #update as the user guesses
-        
 
+# check to see if guessed letter is in phrase
     def check_letter(self, guess):
         if guess.lower() in self.letters:
             for i in range(len(self.letters)):
                 if self.letters[i] == guess.lower():
                     self.phrazed[i] = guess.lower()
 
-
+# checks to see if game has been won
     def check_complete(self):
-        #check if the phrase has been guessed (All the blanks filled in)
         if self.letters == self.phrazed:
             return(True)
         else:
